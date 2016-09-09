@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Check Opps Name --></label>
+        <name>Check_Opps_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Generator(s) --></label>
+        <name>CurrentGenerators__c</name>
+    </fields>
+    <fields>
+        <label><!-- DB Competitor --></label>
+        <name>DB_Competitor__c</name>
+        <picklistValues>
+            <masterLabel>Competitor A</masterLabel>
+            <translation><!-- Competitor A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Competitor B</masterLabel>
+            <translation><!-- Competitor B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Competitor C</masterLabel>
+            <translation><!-- Competitor C --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Delivery/Installation Status --></label>
+        <name>DeliveryInstallationStatus__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In progress</masterLabel>
+            <translation><!-- In progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yet to begin</masterLabel>
+            <translation><!-- Yet to begin --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>LeadSource</name>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner Referral</masterLabel>
+            <translation><!-- Partner Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone Inquiry</masterLabel>
+            <translation><!-- Phone Inquiry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchased List</masterLabel>
+            <translation><!-- Purchased List --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation><!-- Web --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Main Competitor(s) --></label>
+        <name>MainCompetitors__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Number --></label>
+        <name>OrderNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Record ID --></label>
+        <name>Record_ID__c</name>
+    </fields>
+    <fields>
+        <name>StageName</name>
+        <picklistValues>
+            <masterLabel>Application Submitted</masterLabel>
+            <translation><!-- Application Submitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Awarded</masterLabel>
+            <translation><!-- Awarded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed Lost</masterLabel>
+            <translation><!-- Closed Lost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed Won</masterLabel>
+            <translation><!-- Closed Won --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cultivating</masterLabel>
+            <translation><!-- Cultivating --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Id. Decision Makers</masterLabel>
+            <translation><!-- Id. Decision Makers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In-Kind Not Yet Received</masterLabel>
+            <translation><!-- In-Kind Not Yet Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In-Kind Received</masterLabel>
+            <translation><!-- In-Kind Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LOI Submitted</masterLabel>
+            <translation><!-- LOI Submitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Needs Analysis</masterLabel>
+            <translation><!-- Needs Analysis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Negotiation/Review</masterLabel>
+            <translation><!-- Negotiation/Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perception Analysis</masterLabel>
+            <translation><!-- Perception Analysis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pledged</masterLabel>
+            <translation><!-- Pledged --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Posted</masterLabel>
+            <translation><!-- Posted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proposal/Price Quote</masterLabel>
+            <translation><!-- Proposal/Price Quote --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospecting</masterLabel>
+            <translation><!-- Prospecting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Qualification</masterLabel>
+            <translation><!-- Qualification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Value Proposition</masterLabel>
+            <translation><!-- Value Proposition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Withdrawn</masterLabel>
+            <translation><!-- Withdrawn --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tracking Number --></label>
+        <name>TrackingNumber__c</name>
+    </fields>
+    <fields>
+        <name>Type</name>
+        <picklistValues>
+            <masterLabel>Existing Customer - Downgrade</masterLabel>
+            <translation><!-- Existing Customer - Downgrade --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Existing Customer - Replacement</masterLabel>
+            <translation><!-- Existing Customer - Replacement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Existing Customer - Upgrade</masterLabel>
+            <translation><!-- Existing Customer - Upgrade --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Customer</masterLabel>
+            <translation><!-- New Customer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Vehicle --></label>
+        <name>Vehicle__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Formula: The Amount of this Opportunity minus the Payment Writeoff Amount and Payment Amount Received. --></help>
+        <label><!-- Remaining Balance --></label>
+        <name>npe01__Amount_Outstanding__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total value of the Payments marked as written-off or noncollectable for this Opportunity. --></help>
+        <label><!-- Payment Writeoff Amount --></label>
+        <name>npe01__Amount_Written_Off__c</name>
+    </fields>
+    <fields>
+        <help><!-- Hidden field for passing a Contact Id for Contact Role creation. --></help>
+        <label><!-- Contact Id for Role --></label>
+        <name>npe01__Contact_Id_for_Role__c</name>
+    </fields>
+    <fields>
+        <help><!-- If payments are active, and if checked, a new payment will not be automatically created for this Opportunity. --></help>
+        <label><!-- Do Not Automatically Create Payment --></label>
+        <name>npe01__Do_Not_Automatically_Create_Payment__c</name>
+    </fields>
+    <fields>
+        <help><!-- Formula: Whether or not the related Account is defined as an individual (SYSTEMIsIndividual__c) --></help>
+        <label><!-- Is Opp From Individual --></label>
+        <name>npe01__Is_Opp_From_Individual__c</name>
+    </fields>
+    <fields>
+        <help><!-- Determines the value on the Contact or Account of the Last Membership Level field. --></help>
+        <label><!-- Member Level --></label>
+        <name>npe01__Member_Level__c</name>
+        <picklistValues>
+            <masterLabel>Bronze</masterLabel>
+            <translation><!-- Bronze --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold</masterLabel>
+            <translation><!-- Gold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Silver</masterLabel>
+            <translation><!-- Silver --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Date membership period ends. --></help>
+        <label><!-- Membership End Date --></label>
+        <name>npe01__Membership_End_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is this a renewal, a new membership, or a membership with someone who lapsed and has returned. --></help>
+        <label><!-- Membership Origin --></label>
+        <name>npe01__Membership_Origin__c</name>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reacquire</masterLabel>
+            <translation><!-- Reacquire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal</masterLabel>
+            <translation><!-- Renewal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Date when membership period starts --></help>
+        <label><!-- Membership Start Date --></label>
+        <name>npe01__Membership_Start_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total number of payments for this Opportunity (Donation) --></help>
+        <label><!-- Number of Payments --></label>
+        <name>npe01__Number_of_Payments__c</name>
+    </fields>
+    <fields>
+        <help><!-- The total value of Payments marked as paid for this Opportunity. --></help>
+        <label><!-- Payment Amount Received --></label>
+        <name>npe01__Payments_Made__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recurring Donation --></label>
+        <name>npe03__Recurring_Donation__c</name>
+        <relationshipLabel><!-- Donations --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Formula: Concatenated fields used during rollups to locate the most recent opportunity. --></help>
+        <label><!-- Combined Rollup Fieldset --></label>
+        <name>npo02__CombinedRollupFieldset__c</name>
+    </fields>
+    <fields>
+        <help><!-- Controls if Household contact roles are created for Opportunities.  DEPRECATED.  Replaced by custom settings. --></help>
+        <label><!-- _SYSTEM: HOUSEHOLD CONTACT ROLEPROCESSOR --></label>
+        <name>npo02__systemHouseholdContactRoleProcessor__c</name>
+        <picklistValues>
+            <masterLabel>All Opportunities</masterLabel>
+            <translation><!-- All Opportunities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Opportunities</masterLabel>
+            <translation><!-- No Opportunities --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Datum der Bestätigungsdatum</help>
+        <label><!-- Acknowledgment Date --></label>
+        <name>npsp__Acknowledgment_Date__c</name>
+    </fields>
+    <fields>
+        <help>Status der Bestätigung dieses Geschenks</help>
+        <label><!-- Acknowledgment Status --></label>
+        <name>npsp__Acknowledgment_Status__c</name>
+        <picklistValues>
+            <masterLabel>Acknowledged</masterLabel>
+            <translation>Bestätigt</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Do Not Acknowledge</masterLabel>
+            <translation>Nicht bestätigen</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email Acknowledgment Not Sent</masterLabel>
+            <translation>E-Mail-Bestätigung nicht gesendet</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email Acknowledgment Now</masterLabel>
+            <translation>E-Mail-Bestätigung jetzt</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>To Be Acknowledged</masterLabel>
+            <translation>Zu bestätigen</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Batch --></label>
+        <name>npsp__Batch__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Der mittlere Marktwert eines Sachgeschenks</help>
+        <label><!-- Fair Market Value --></label>
+        <name>npsp__Fair_Market_Value__c</name>
+    </fields>
+    <fields>
+        <help>Das Datum des Unterstützungsbeginns gemäß dem Dokument oder Vertrag, das die unterstützende Organisation gesendet hat</help>
+        <label><!-- Grant Contract Date --></label>
+        <name>npsp__Grant_Contract_Date__c</name>
+    </fields>
+    <fields>
+        <help>Verfolgt eindeutige Zahlen, die manchmal von unterstützenden Organisationen zugewiesen werden</help>
+        <label><!-- Grant Contract Number --></label>
+        <name>npsp__Grant_Contract_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grant Period End Date --></label>
+        <name>npsp__Grant_Period_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grant Period Start Date --></label>
+        <name>npsp__Grant_Period_Start_Date__c</name>
+    </fields>
+    <fields>
+        <help>Beschreibt die Finanzierungsbereiche der Unterstützung Sie können hier einen beliebigen Eintrag vornehmen. Sie könnten beispielsweise den Namen des Programms eingeben, auf den sich die Unterstützung bezieht.</help>
+        <label><!-- Grant Program Area(s) --></label>
+        <name>npsp__Grant_Program_Area_s__c</name>
+    </fields>
+    <fields>
+        <help>Ein URL, der auf die Unterstützungsanforderungen auf der Website des Geldgebers verweist</help>
+        <label><!-- Grant Requirements Website --></label>
+        <name>npsp__Grant_Requirements_Website__c</name>
+    </fields>
+    <fields>
+        <help>Der vorhandene Kontaktdatensatz des Begünstigten für diese Spende</help>
+        <label><!-- Honoree Contact --></label>
+        <name>npsp__Honoree_Contact__c</name>
+        <relationshipLabel><!-- Opportunities (Honoree Contact) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Der vom Spender angegebene Name des Begünstigten Wenn dieses Feld leer bleibt und das Feld für den Kontakt des Begünstigten einen Wert enthält, wird dieser Wert von Salesforce automatisch in dieses Feld eingetragen.</help>
+        <label><!-- Honoree Name --></label>
+        <name>npsp__Honoree_Name__c</name>
+    </fields>
+    <fields>
+        <help>Enthält eine Rich Text-Beschreibung des Sachgeschenks einschließlich Fotos</help>
+        <label><!-- In-Kind Description --></label>
+        <name>npsp__In_Kind_Description__c</name>
+    </fields>
+    <fields>
+        <help>Aktiviert, falls der Spender den mittleren Marktwert für dieses Sachgeschenk angegeben hat</help>
+        <label><!-- In-Kind Donor Declared Value --></label>
+        <name>npsp__In_Kind_Donor_Declared_Value__c</name>
+    </fields>
+    <fields>
+        <help>Der Typ des Sachgeschenks</help>
+        <label><!-- In-Kind Type --></label>
+        <name>npsp__In_Kind_Type__c</name>
+        <picklistValues>
+            <masterLabel>Goods</masterLabel>
+            <translation>Waren</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Services</masterLabel>
+            <translation><!-- Services --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Die Auswahl dieser Option besagt, dass die Unterstützung eine Erneuerung einer früheren Unterstützung ist.</help>
+        <label><!-- Is Grant Renewal --></label>
+        <name>npsp__Is_Grant_Renewal__c</name>
+    </fields>
+    <fields>
+        <help><!-- The account of the company who will match this gift. --></help>
+        <label><!-- Matching Gift Account --></label>
+        <name>npsp__Matching_Gift_Account__c</name>
+        <relationshipLabel><!-- Matched Gifts --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The name of the company who will match this gift. --></help>
+        <label><!-- Matching Gift Employer --></label>
+        <name>npsp__Matching_Gift_Employer__c</name>
+    </fields>
+    <fields>
+        <help><!-- The status of this gift being matched. --></help>
+        <label><!-- Matching Gift Status --></label>
+        <name>npsp__Matching_Gift_Status__c</name>
+        <picklistValues>
+            <masterLabel>Potential</masterLabel>
+            <translation>Potenziell</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Received</masterLabel>
+            <translation>Empfangen</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation>Abgesendet</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The employer&apos;s matching gift for this employee&apos;s gift. --></help>
+        <label><!-- Matching Gift --></label>
+        <name>npsp__Matching_Gift__c</name>
+        <relationshipLabel><!-- Matched Gifts --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Dieses Feld wird von NPSP basierend auf dem nächsten Unterstützungstermin-Datensatz automatisch aktualisiert.</help>
+        <label><!-- Next Grant Deadline Due Date --></label>
+        <name>npsp__Next_Grant_Deadline_Due_Date__c</name>
+    </fields>
+    <fields>
+        <help>Eine personalisierte Nachricht für den Benachrichtigungsempfänger</help>
+        <label><!-- Notification Message --></label>
+        <name>npsp__Notification_Message__c</name>
+    </fields>
+    <fields>
+        <help>Wie der Benachrichtigungsempfänger benachrichtigt werden sollte</help>
+        <label><!-- Notification Preference --></label>
+        <name>npsp__Notification_Preference__c</name>
+        <picklistValues>
+            <masterLabel>Do Not Notify</masterLabel>
+            <translation>Keine Benachrichtigung</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation>E-Mails</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone</masterLabel>
+            <translation>Telefon</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Postal Mail</masterLabel>
+            <translation>Postweg</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help>Der vorhandene Kontaktdatensatz der Person, die bezüglich dieser Spende benachrichtigt werden soll</help>
+        <label><!-- Notification Recipient Contact --></label>
+        <name>npsp__Notification_Recipient_Contact__c</name>
+        <relationshipLabel><!-- Opportunities (Notification Recipient) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Die (vom Spender angegebenen) Kontaktinformationen für den Benachrichtigungsempfänger</help>
+        <label><!-- Notification Recipient Information --></label>
+        <name>npsp__Notification_Recipient_Information__c</name>
+    </fields>
+    <fields>
+        <help>Der (vom Spender angegebene) Name d. Person, d. über dieses Geschenk benachrichtigt werden soll. Wenn dieses Feld leer bleibt und d. Feld f. d. Kontakt des Benachrichtigungsempfängers einen Wert enthält, wird dieser automatisch von Salesforce übertragen.</help>
+        <label><!-- Notification Recipient Name --></label>
+        <name>npsp__Notification_Recipient_Name__c</name>
+    </fields>
+    <fields>
+        <help>Wenn diese Unterstützung eine Erneuerung einer früheren Unterstützung ist, können Sie dieses Feld verwenden, um diesen Datensatz mit dem früheren Datensatz zu verknüpfen.</help>
+        <label><!-- Previous Grant Opportunity --></label>
+        <name>npsp__Previous_Grant_Opportunity__c</name>
+        <relationshipLabel><!-- Related Grant Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Status z. Erst. eines Kamp.mitgl. f. d. Hauptanspr.partner u. d. primäre Kamp.quelle dies. Opportunity. Feld leer lassen, w. standardm. Status &quot;Geantwortet&quot; f. geschl./gewonn. Opportunites u. Status &quot;Nicht geantwortet&quot; f. and. Opportunities eingest. wird.</help>
+        <label><!-- Primary Contact Campaign Member Status --></label>
+        <name>npsp__Primary_Contact_Campaign_Member_Status__c</name>
+    </fields>
+    <fields>
+        <help>Der Hauptansprechpartner für diese Opportunity Die Hauptansprechpartnerrolle wird ständig mit diesem Feld synchronisiert. Für Einzelpersonenspenden bezeichnet dies die Zuschreibung für diese Opportunity.</help>
+        <label><!-- Primary Contact --></label>
+        <name>npsp__Primary_Contact__c</name>
+        <relationshipLabel><!-- Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <help>Ratenbezeichnung zur Verwendung in der Opportunity-Benennung Zeigt die Ratenanzahl in Klammern für unbefristete wiederkehrende Spenden bzw. die Nummer der Rate aus der Gesamtanzahl für wiederkehrende Spenden mit einer festgelegten Anzahl von Raten</help>
+        <label><!-- Recurring Donation Installment Name --></label>
+        <name>npsp__Recurring_Donation_Installment_Name__c</name>
+    </fields>
+    <fields>
+        <help>Die Ratenanzahl des Zeitplans für wiederkehrende Spenden dieser Opportunity</help>
+        <label><!-- Recurring Donation Installment Number --></label>
+        <name>npsp__Recurring_Donation_Installment_Number__c</name>
+    </fields>
+    <fields>
+        <help>Der von Ihnen angeforderte Betrag Diese Zahl kann vom endgültigen Betrag der Vergabe abweichen.</help>
+        <label><!-- Requested Amount --></label>
+        <name>npsp__Requested_Amount__c</name>
+    </fields>
+    <fields>
+        <help>Gibt an, ob das Geschenk zu Ehren oder zur Erinnerung einer Einzelperson gedacht ist</help>
+        <label><!-- Tribute Type --></label>
+        <name>npsp__Tribute_Type__c</name>
+        <picklistValues>
+            <masterLabel>Honor</masterLabel>
+            <translation>Ehrung</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Memorial</masterLabel>
+            <translation>Gedenken</translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Opportunity Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Donation --></label>
+        <name>Donation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Grant --></label>
+        <name>Grant</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Membership --></label>
+        <name>Membership</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- NPSP Default --></label>
+        <name>NPSP_Default</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- DeliveryStatus --></label>
+        <name>DeliveryStatus</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Matching_Donation --></label>
+        <name>npe01__Matching_Donation</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Contact_Donation --></label>
+        <name>npe01__New_Contact_Donation</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Organization_Donation --></label>
+        <name>npe01__New_Organization_Donation</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Email_Acknowledgment --></label>
+        <name>npsp__Email_Acknowledgment</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Email_Acknowledgments --></label>
+        <name>npsp__Email_Acknowledgments</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Find_Matched_Gifts --></label>
+        <name>npsp__Find_Matched_Gifts</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Manage_Soft_Credits --></label>
+        <name>npsp__Manage_Soft_Credits</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Refresh_Name --></label>
+        <name>npsp__Refresh_Name</name>
+    </webLinks>
+</CustomObjectTranslation>
