@@ -42,10 +42,6 @@
                 <behavior>Edit</behavior>
                 <field>skrocks7__Vehicle__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>skrocks7__Check_Opps_Name__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

@@ -27,15 +27,15 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>skrocks7__Record_ID__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
                 <field>skrocks7__Potential_Value__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>skrocks7__Match_Billing_Address__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>skrocks7__Number_of_Contacts__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

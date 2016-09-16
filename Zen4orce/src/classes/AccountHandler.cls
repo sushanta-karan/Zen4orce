@@ -5,11 +5,11 @@ public class AccountHandler {
         try
         {
           insert Acct;
-            return Acct;
+            
         } catch (Exception e) {
             System.debug('A DML exception has occurred: ' + e.getMessage());
             return null;
-        }
+        }return Acct;
         
     }
 }
