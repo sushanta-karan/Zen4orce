@@ -10,7 +10,6 @@ public class AccountHandlerClassTest {
         User u2 = new User(Alias = 'standt', Email='standarduser@abc.com',EmailEncodingKey='UTF-8', LastName='Testing', LanguageLocaleKey='en_US', LocaleSidKey='en_US', ProfileId = p1.Id,TimeZoneSidKey='America/Los_Angeles', UserName='standarduser2@abc.com');
         insert u2;
         Account acc;
-        // Account acc1;
         for(Integer i=0;i<50;i++){
            acc = new Account (Name = 'Test Account',OwnerId=u1.Id);
             accList.add(acc);
@@ -56,6 +55,7 @@ public class AccountHandlerClassTest {
         for(Contact c1 : contact)
         system.assertEquals(u1.id, c1.OwnerId);
     }
+    
     static testmethod void UpdateOwner(){
         List<Account> accList = new List <Account> ();
         Profile p1 = [SELECT Id FROM Profile WHERE Name='Standard User'];

@@ -21,7 +21,7 @@ public class OpportunityHandlerClassTest {
     }
 }
         List<Task> t = [SELECT id,WhatId,Subject FROM Task WHERE WhatId =: opps];
-  		for(Task t1 : t)
+      for(Task t1 : t)
         system.assertEquals(t1.Subject, 'Follow Up Test Task');
         
         
