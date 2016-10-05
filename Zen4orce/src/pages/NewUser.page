@@ -1,0 +1,53 @@
+<apex:page controller="User_MyCustomMyClass">
+    <apex:form >
+        <apex:pageBlock mode="edit">
+             <apex:pageBlockButtons >
+                 <apex:commandButton value="Save" action="{!Save}"/>
+                                        
+             </apex:pageBlockButtons>
+        
+            <apex:pageBlockSection title="UserInformation" collapsible="False" columns="2">
+            
+                <apex:inputField value="{!use1.IsActive}"/>
+                <apex:outputField value="{!use1.FirstName}"/>
+                <apex:outputField value="{!use1.LastName}"/>
+                <apex:inputField value="{!use1.UserName}"/>
+                <apex:inputField value="{!use1.Alias}"/>
+                <apex:outputField value="{!use1.Email}"/>
+                <apex:inputField value="{!use1.UserRoleID}"/>
+                 <apex:inputField value="{!use1.CommunityNickname}"/>
+                       
+            </apex:pageBlockSection>
+        
+           <apex:pageBlockSection >
+           
+                <apex:inputField value="{!use1.Phone}"/>
+                <apex:inputField value="{!use1.Extension}"/>
+                <apex:inputField value="{!use1.Fax}"/>
+                <apex:inputField value="{!use1.EmployeeNumber}"/>
+                <apex:inputField value="{!use1.FederationIdentifier}"/>
+                <apex:inputField value="{!use1.Division}"/>
+                <apex:inputField value="{!use1.Department}"/>                   
+           
+           </apex:pageBlockSection>
+           
+            <apex:pageBlockSection title="Liscence Information" collapsible="True" columns="2" >
+                
+            </apex:pageBlockSection>
+             
+             <apex:pageBlockSection title="Other Information" columns="1" collapsible="false">
+
+                   <apex:inputField value="{!use1.EmailEncodingKey}"/>
+                   <apex:inputField value="{!use1.TimeZoneSidKey}"/>
+                   <apex:inputField value="{!use1.LocaleSidKey}"/>
+                   <apex:inputField value="{!use1.LanguageLocaleKey}"/>
+
+               </apex:pageBlockSection>
+
+                     </apex:pageBlock>
+    
+    
+    
+    </apex:form>
+  
+</apex:page>

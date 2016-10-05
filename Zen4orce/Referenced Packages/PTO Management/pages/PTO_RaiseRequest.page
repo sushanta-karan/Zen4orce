@@ -1,0 +1,50 @@
+<apex:page standardController="PTO__PTO_Request__c" extensions="PTO.PTO_RaiseRequestController" >
+  <apex:sectionHeader subtitle="PTO Request" title="{!$User.FirstName} {!$User.LastName}"/>
+  <apex:pageMessages ></apex:pageMessages>
+  <apex:form >
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script type="text/javascript">
+          $(document).ready(function(){
+              var cell=$('span[id$="thePanel"]').parent();                                                                    
+              $('<th class="labelCol vfLabelColTextWrap  last " scope="row" id="theInsRow"></th>').insertBefore(cell);                          
+          });
+      </script>
+   <apex:pageBlock id="pageblockId">
+       <apex:pageBlockButtons >
+           <apex:commandButton value="Save Request" action="{!saveReq}" rendered="{!$ObjectType.PTO__PTO_Request__c.Updateable || $ObjectType.PTO__PTO_Request__c.Createable}"/>
+           <apex:commandButton value="Cancel" action="{!cancel}"/>
+       </apex:pageBlockButtons>
+
+       <apex:pageBlockSection title="Request Information" id="sectionId">
+           <apex:outputField value="{!objPTO.PTO__Employee__c}" />
+           <apex:outputField value="{!objPTO.PTO__Hours_Remaining__c}" />
+                                          
+           <apex:pageBlockSectionItem id="sectionItem">
+               <apex:outputLabel value="{!$ObjectType.PTO__PTO_Request__c.fields.PTO__Hours__c.label}" for="hrsId"/>
+               <apex:actionRegion >
+                   <apex:inputField id="hrsId" value="{!objPTO.PTO__Hours__c}" label="Hours" >
+                    <apex:actionSupport action="{!getTime}" event="onchange" reRender="thePanel" /> 
+                   </apex:inputField>                                          
+               </apex:actionRegion>
+           </apex:pageBlockSectionItem> 
+           <apex:outputPanel id="thePanel">  
+                   <!--<apex:outputLabel value="{!$ObjectType.PTO_Request__c.fields.Time__c.label}" for="hrsId" rendered="{!flag}"/>-->
+                   <apex:inputField id="timeId" value="{!objPTO.PTO__Time__c}" rendered="{!flag}"/>   
+                   <script type="text/javascript">                      
+                      var flag='{!flag}';
+                      if(flag!='false')
+                          $('#theInsRow').text('{!$ObjectType.PTO__PTO_Request__c.fields.PTO__Time__c.label}');
+                      else
+                          $('#theInsRow').text('');                                            
+                  </script>            
+               </apex:outputPanel>
+               <apex:inputField value="{!objPTO.PTO__Start_Date__c}" required="true" />
+           <apex:inputField value="{!objPTO.PTO__End_Date__c}" required="true"/>  
+               
+               
+                                               
+       </apex:pageBlockSection>
+      
+   </apex:pageBlock>
+  </apex:form>
+</apex:page>

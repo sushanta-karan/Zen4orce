@@ -1,0 +1,17 @@
+<apex:page controller="CountryStatePicker">
+   <apex:form >
+      <apex:actionFunction name="rerenderStates" rerender="statesSelectList" >
+          <apex:param name="firstParam" assignTo="{!country}" value="" />
+      </apex:actionFunction>
+       <apex:outputText value="Country"/> <apex:selectList id="country" styleclass="std" size="1" 
+                value="{!country}" onChange="rerenderStates(this.value)" label="Country">
+       <apex:selectOptions value="{!countriesSelectList}"/>
+            </apex:selectList>
+          
+       <br/> City:  <apex:selectList id="statesSelectList" styleclass="std" size="1" 
+                 value="{!state}" label="Country">
+                   <apex:selectOptions value="{!statesSelectList}"/>
+       </apex:selectList>  <br/>
+          
+   </apex:form>
+</apex:page>

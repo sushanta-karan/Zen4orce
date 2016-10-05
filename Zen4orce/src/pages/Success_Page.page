@@ -1,0 +1,7 @@
+<apex:page sidebar="false">
+    <h1>
+        <apex:image value="/img/loading32.gif" />
+        Your admission application has been submitted successfully.
+    </h1>
+    
+</apex:page>

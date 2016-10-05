@@ -1,0 +1,29 @@
+<apex:page standardController="UT_Fund__c" sidebar="false" extensions="UTFundExtension">
+   <apex:form >
+       <apex:sectionheader title="UT Fund" subtitle="{!if(UT_Fund__c.Id==null,'New UT Fund',UT_Fund__c.Name)}" ></apex:sectionheader>
+        <apex:pageBlock title="UT Fund Edit">
+            <apex:pageBlockButtons >
+              <apex:commandButton action="{!save}" value="Save" ></apex:commandButton>
+              <apex:commandButton action="{!saveAndNew}" value="Save & New"></apex:commandButton>
+              <apex:commandButton action="{!cancel}" value="Cancel"></apex:commandButton>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="2" title="Information" collapsible="false">
+                <apex:inputField value="{!UT_Fund__c.Name}" required="true"/>
+                <apex:outputField value="{!currentuser.Name}" label="Owner"/>  
+                <apex:inputField value="{!UT_Fund__c.Name_Long__c}"/>
+                <apex:inputField value="{!UT_Fund__c.Lux_Internal_Fund_No__c}"/>
+                <apex:inputField value="{!UT_Fund__c.ISIN__c}" required="true"/>
+                <apex:inputField value="{!UT_Fund__c.WKN__c}"/>
+                <apex:inputField value="{!UT_Fund__c.Currency__c}" required="true"/>
+                <apex:inputField value="{!UT_Fund__c.Valuata_Subscription__c}"/>
+                <apex:inputField value="{!UT_Fund__c.Management_Fee__c}"/>
+                <apex:inputField value="{!UT_Fund__c.Valuata_Redemption__c}"/>
+                <apex:inputField value="{!UT_Fund__c.Closing_Date__c}"/>
+                <apex:inputField value="{!UT_Fund__c.Amount__c}"/>
+                <apex:inputField value="{!UT_Fund__c.Front_End_Load__c}"/>
+                <apex:inputField value="{!UT_Fund__c.Opening_Date__c}"/>
+                <apex:inputField value="{!UT_Fund__c.Cut_off_Time__c}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

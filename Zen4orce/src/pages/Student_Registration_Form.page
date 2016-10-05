@@ -1,0 +1,71 @@
+<apex:page Controller="My_Student" sidebar="false" language="{!lang}">
+    <style type="text/css">
+        .asideText { font-style: italic; font : Courier}
+        body {
+        background-image: url("http://www.w3schools.com/cssref/img_tree.png");
+    background-repeat: no-repeat;
+        background-color: #e1e1d0;
+}
+    </style>
+    
+    <head>
+<style>
+    div {
+       background-color: #e7e1u0;
+}
+.button {
+    background-color: #4CAF00; 
+    border: none;
+    color: black;
+    padding:100px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: outline-block;
+    font-size: 25px;
+    margin: 100px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+}
+
+.button1 {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+</style>
+</head>
+    <apex:form styleClass="asideText">
+        <apex:sectionheader title="Student Registration" subtitle="New Student Registration"/>
+       <apex:pageBlock >
+            <apex:pageBlockButtons location="bottom">
+              <apex:commandButton action="{!save}" value="Submit" styleClass="button button2" style="width:90px" ></apex:commandButton>
+                <apex:commandButton action="{!cancel}" value="Cancel" styleClass="button button2" style="width:90px"></apex:commandButton>
+                </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="1" title="Information" collapsible="false">
+                <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Select Language:" />
+                <apex:selectList value="{!language}" size="1" multiselect="false" >
+                <apex:actionSupport event="onchange" action="{!hello}"/>
+                <apex:selectOptions value="{!languagelist}" />
+                </apex:selectList>
+                </apex:pageBlockSectionItem>
+                
+                <apex:inputField value="{!stu.Name}" />
+                <apex:inputField value="{!stu.Roll_number__c}" />
+                <apex:inputField value="{!stu.Gender__c}"/>
+                <apex:inputField value="{!stu.Course_Applying_for__c}"/>
+                <apex:inputField value="{!stu.H_S_C__c}"/>
+                <apex:inputField value="{!stu.S_S_C__c}"/>
+                <apex:inputField value="{!stu.Country__c}"/>
+                <apex:inputField value="{!stu.State__c}"/>
+                <apex:inputField value="{!stu.City__c}"/>
+                
+                </apex:pageBlockSection>
+            
+         </apex:pageBlock>
+            
+    </apex:form>
+</apex:page>

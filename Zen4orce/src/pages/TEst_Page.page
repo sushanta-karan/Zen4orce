@@ -1,0 +1,9 @@
+<apex:page id="thepage" controller="PageController" language="{!IF(ISNULL(language),'en_US',language)}">
+	<apex:form id="theform">
+		<apex:actionfunction name="changeEnglish" action="{!changeEnglish}" rerender="thepage"/>
+		<apex:actionfunction name="changeFrench" action="{!changeFrench}" rerender="thepage"/>
+		<apex:outputLabel value="{!$Label.french}" rendered="true" onclick="changeEnglish();"/>
+		<apex:outputLabel value="{!$Label.english}" rendered="true" onclick="changeFrench();"/>
+		Text of page here
+	</apex:form>
+</apex:page>

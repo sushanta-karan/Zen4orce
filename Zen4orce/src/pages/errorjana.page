@@ -1,0 +1,33 @@
+<apex:page >
+<apex:pageBlock title="Small Messages">
+    <apex:pageMessage summary="This is a warning" severity="confirm" strength="1" />
+    <apex:pageMessage summary="This is a piece of information" severity="info" strength="1" />  
+    <apex:pageMessage summary="This is a warning" severity="warning" strength="1" /> 
+    <apex:pageMessage summary="This is an error" severity="error" strength="1" /> 
+    <apex:pageMessage summary="This is a fatal message" severity="fatal" strength="1" />
+</apex:pageBlock>
+<apex:pageBlock title="Medium Messages">
+    <apex:pageMessage summary="This is a warning" severity="confirm" strength="2" />
+    <apex:pageMessage summary="This is a piece of information" severity="info" strength="2" />  
+    <apex:pageMessage summary="This is a warning" severity="warning" strength="2" /> 
+    <apex:pageMessage summary="This is an error" severity="error" strength="2" /> 
+    <apex:pageMessage summary="This is a fatal message" severity="fatal" strength="2" />
+</apex:pageBlock>
+<apex:pageBlock title="Large Messages">
+    <apex:pageMessage summary="This is a warning" severity="confirm" strength="3" />
+    <apex:pageMessage summary="This is a piece of information" severity="info" strength="3" />  
+    <apex:pageMessage summary="This is a warning" severity="warning" strength="3" /> 
+    <apex:pageMessage summary="This is an error" severity="error" strength="3" /> 
+    <apex:pageMessage summary="This is a fatal message" severity="fatal" strength="3" />
+</apex:pageBlock> 
+<apex:image value="/img/msg_icons/confirm16.png" />
+<apex:image value="/img/msg_icons/confirm24.png" />
+<apex:image value="/img/msg_icons/confirm32.png" />
+<apex:image value="/img/msg_icons/error16.png" />
+<apex:image value="/img/msg_icons/error24.png" />
+<apex:image value="/img/msg_icons/error32.png" />
+<apex:image value="/img/msg_icons/warning16.png" />
+<apex:image value="/img/msg_icons/warning24.png" />
+<apex:image value="/img/msg_icons/warning32.png" />
+<apex:image value="/img/loading32.gif" />
+</apex:page>

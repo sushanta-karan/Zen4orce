@@ -1,0 +1,56 @@
+<apex:page standardController="PTO__PTO_Alloted__c" extensions="PTO.PTO_AllotHours" standardStylesheets="false">
+  <apex:pageMessages ></apex:pageMessages>
+  <apex:form >
+   <apex:pageBlock >
+    <apex:pageBlockButtons >
+        <apex:commandButton id="saveButton" value="Save" action="{!saveList}" rendered="{!NOT(flag) && $ObjectType.PTO__PTO_Alloted__c.Updateable}" />
+        <apex:commandButton id="cancelButton" value="Cancel" action="{!cancelList}" rendered="{!NOT(flag)}"/>
+        <apex:commandButton id="editButton" value="Edit" action="{!editList}" rendered="{!(flag) && ($ObjectType.PTO__PTO_Alloted__c.Updateable)}"  style="width:40px;align:center;" />
+    </apex:pageBlockButtons>
+
+    <apex:pageBlockSection columns="1" title="Employees Current Year PTO Allotment">
+      <apex:pageBlockTable value="{!lstUsersCY}" var="u" align="center" cellpadding="8" cellspacing="0" width="60%" style="width:100%;" >
+          <apex:column headerValue="Employee" width="20%">
+              <apex:outputField value="{!u.PTO__Employee__c}"/>
+          </apex:column>
+          <apex:column headerValue="Hours Alloted" width="20%">
+              <apex:inputField value="{!u.PTO__Hours_Alloted__c}" style="width:40px;align:center;" rendered="{!NOT(flag)}"/>
+              <apex:outputField value="{!u.PTO__Hours_Alloted__c}" style="width:40px;align:center;" rendered="{!flag}"/>
+          </apex:column>   
+          <apex:column headerValue="Hours Taken" width="20%">
+              <apex:outputField value="{!u.PTO__Hours_Taken__c}" style="width:40px;"/>
+          </apex:column>
+          <apex:column headerValue="Hours Remaining" width="20%">
+              <apex:outputField value="{!u.PTO__Hours_Remaining__c}" style="width:40px;"/>
+          </apex:column>  
+          <apex:column headerValue="Year" width="20%">
+              <apex:outputField value="{!u.PTO__Year__c}" style="width:40px;"/>
+          </apex:column>   
+      </apex:pageBlockTable> 
+    </apex:pageBlockSection>  
+    
+    <apex:pageBlockSection title="Employees PTO Allotment History" columns="1"> 
+      <apex:pageBlockTable value="{!existingUsers}" var="u" style="width:100%;">
+          <apex:column headerValue="Employee" width="20%">
+              <apex:outputField value="{!u.PTO__Employee__c}"/>
+          </apex:column>
+          <apex:column headerValue="Hours Alloted" width="20%">
+              <apex:outputField value="{!u.PTO__Hours_Alloted__c}" style="width:40px;">                  
+              </apex:outputField>
+          </apex:column> 
+          <apex:column headerValue="Hours Taken" width="20%">
+              <apex:outputField value="{!u.PTO__Hours_Taken__c}" style="width:40px;"/>
+          </apex:column>
+          <apex:column headerValue="Hours Remaining" width="20%">
+              <apex:outputField value="{!u.PTO__Hours_Remaining__c}" style="width:40px;"/>
+          </apex:column>  
+          <apex:column headerValue="Year" width="20%">
+              <apex:outputField value="{!u.PTO__Year__c}" style="width:40px;"/>
+          </apex:column>   
+      </apex:pageBlockTable>
+      
+    </apex:pageBlockSection>       
+
+   </apex:pageBlock>
+  </apex:form>
+</apex:page>

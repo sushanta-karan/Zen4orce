@@ -1,0 +1,27 @@
+<apex:page standardController="UT_Transactions__c" sidebar="false" label="New UT Transaction" standardStylesheets="false" extensions="UTTransactionExtensionEdit">
+<apex:form >
+    <apex:sectionheader title="UT Transactions" subtitle="{!if(UT_Transactions__c.Id==null,'UT Transactions',UT_Transactions__c.Name)}" ></apex:sectionheader>
+      <apex:pageBlock title="UT Transaction Edit">
+          <apex:pageBlockButtons >
+          <apex:commandButton action="{!save}" value="Save"></apex:commandButton>
+          <apex:commandButton action="{!cancel}" value="Cancel"></apex:commandButton>
+          </apex:pageBlockButtons>
+          <apex:pageMessages id="showmsg"/>
+          <apex:pageBlockSection title="Information" columns="2" >
+              <apex:inputField value="{!UT_Transactions__c.Transaction_Date__c}" required="true"/>
+              <apex:inputField value="{!UT_Transactions__c.OwnerID}"/>
+              <apex:inputField value="{!UT_Transactions__c.Client_name__c}" required="true"/>
+              <apex:inputField value="{!UT_Transactions__c.UT_Fund_name__c}" required="true"/>
+              <apex:inputField value="{!UT_Transactions__c.Transaction_Price__c}"/>
+              <apex:inputField value="{!UT_Transactions__c.Transaction_Type__c}"/>
+              <apex:inputField value="{!UT_Transactions__c.Amount__c}"/>
+              <apex:inputField value="{!UT_Transactions__c.No_of_Units__c}"/>
+              <apex:inputField value="{!UT_Transactions__c.Currency__c}"/>
+              <apex:inputField value="{!UT_Transactions__c.Remarks__c}"/>
+              <apex:inputField value="{!UT_Transactions__c.Dealing_Terms__c}"/>
+              <apex:inputField value="{!UT_Transactions__c.Switching_Fee__c}"/>
+          </apex:pageBlockSection> 
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

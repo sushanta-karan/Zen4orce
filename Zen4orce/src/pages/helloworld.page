@@ -1,0 +1,15 @@
+<apex:page standardController="Contact" showHeader="false" sidebar="true">
+<apex:form >
+ <apex:pageBlock title="new look">
+  <apex:pageBlockSection columns="3">
+   <apex:inputField value="{!Contact.Languages__c}"/>
+   <apex:inputField value="{!Contact.LeadSource}"/>
+   <apex:inputSecret />
+   <apex:commandButton value="Update" action="{!Quicksave}"/>
+  </apex:pageBlockSection>
+ 
+ </apex:pageBlock>
+</apex:form>
+<apex:detail relatedList="false"/>
+<apex:relatedList list="Leads__r"/>
+</apex:page>

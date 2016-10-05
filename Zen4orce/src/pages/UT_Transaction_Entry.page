@@ -1,0 +1,81 @@
+<apex:page standardController="UT_Transactions__c" sidebar="false" extensions="UTTransactionExtension"  label="New UT Transaction" standardStylesheets="false">
+<style type="text/css">
+        .asideText { font-style: italic; font : Courier}
+        body {
+    background-image: url("img_tree.png");
+    background-repeat: no-repeat;
+        background-color: #e1e1d0;
+}
+    </style>
+    
+    <head>
+<style>
+    div {
+       background-color: #e1e1d0;
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: black;
+    padding:100px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: outline-block;
+    font-size: 25px;
+    margin: 100px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.button1 {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+</style>
+</head>
+    
+    <apex:form styleClass="asideText">
+        
+        <apex:sectionheader title="UT Transactions" subtitle="New UT Transactions"/>
+        
+        <apex:outputPanel id="t1">
+        <apex:pageBlock title="UT Transaction Entry" id="pg">
+            <apex:pageBlockButtons >
+              <apex:commandButton action="{!saveNew}" value="Save" styleClass="button button2" style="width:90px" rerender="showmsg"></apex:commandButton>
+              <!--<apex:commandButton action="{!saveAndNew}" value="Save & New" styleClass="button button2" style="width:90px"></apex:commandButton>-->
+              <apex:commandButton action="{!cancel}" value="Cancel" styleClass="button button2" style="width:90px"></apex:commandButton>
+            </apex:pageBlockButtons>
+            <apex:pageMessages id="showmsg"/>
+            <apex:pageBlockSection columns="2" title="Information" collapsible="false" id="accinfo">
+                <apex:inputField value="{!uttrans.Transaction_Date__c}" required="true"/>
+                <apex:outputField value="{!currentuser.Name}" label="Owner"/>  
+                <apex:inputField value="{!uttrans.Client_name__c}" required="true"/>
+                <apex:inputField value="{!uttrans.UT_Fund_name__c}" required="true">
+                <apex:actionSupport event="onchange" action="{!fetchMemberDetails}" reRender="pg"/>
+                    </apex:inputField>
+                <apex:inputField value="{!uttrans.Transaction_Price__c}" />
+                <apex:inputField value="{!uttrans.Transaction_Type__c}">
+                 <apex:actionSupport event="onchange" rerender="t1" />
+                </apex:inputField>
+                <apex:inputField value="{!uttrans.Amount__c}"/>
+                <apex:inputField value="{!uttrans.No_of_Units__c}"/>
+                <apex:inputField value="{!uttrans.Currency__c}"/>
+                <apex:inputField value="{!uttrans.Remarks__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2" title="Transaction" collapsible="false" >
+                
+                <apex:inputField value="{!uttrans.Dealing_Terms__c}" rendered="{!IF( uttrans.Transaction_Type__c == 'Purchase', true, false )}">
+                   <apex:actionSupport event="onchange" rerender="t1" />
+ </apex:inputField>
+            <apex:inputField value="{!uttrans.Switching_Fee__c}" rendered="{!IF( (uttrans.Transaction_Type__c == 'Purchase (switch In)' || uttrans.Transaction_Type__c == 'Redemption (Switch Out)'), true, false )}">
+                   <apex:actionSupport event="onchange" rerender="t1" />
+ </apex:inputField>    
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+            </apex:outputPanel>
+</apex:form>
+</apex:page>

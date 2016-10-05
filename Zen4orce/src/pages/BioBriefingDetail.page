@@ -1,0 +1,38 @@
+<apex:page standardController="BioBriefing__c" sidebar="false" title="BioBriefing Details" extensions="ControllerBioBriefing">
+    <apex:form >
+    
+    <apex:pageBlock title="BioBriefing Details" >
+         <apex:pageBlockButtons >
+            <apex:commandButton action="{!edit}" value="Edit"></apex:commandButton>
+            <apex:commandButton action="{!delete}" value="Delete"></apex:commandButton>
+             <apex:commandButton action="{!URLFOR($Action.BioBriefing__c.Clone)}" value="Clone"></apex:commandButton>
+             <apex:commandButton value="Upload Photo"  action="{!uploadphoto}"></apex:commandButton>
+</apex:pageBlockButtons>
+    <apex:pageBlockSection columns="2" >
+        
+         <apex:outputField value="{! BioBriefing__c.OwnerID }"/>
+        <apex:outputField value="{! BioBriefing__c.Phone__c	 }"/>
+        <apex:outputField value="{! BioBriefing__c.Name }"/>
+        <apex:outputField value="{! BioBriefing__c.Home_Phone__c }"/>
+        <apex:outputField value="{! BioBriefing__c.Account_Name__c }"/>
+        <apex:outputField value="{! BioBriefing__c.Other_Phone__c }"/>
+        <apex:outputField value="{! BioBriefing__c.Title__c }"/>
+         <apex:outputField value="{! BioBriefing__c.Fax__c }"/>
+        <apex:outputField value="{! BioBriefing__c.Department__c }"/>
+        <apex:outputField value="{! BioBriefing__c.Email__c	 }"/>
+        <apex:outputField value="{! BioBriefing__c.Birthdate__c }"/>
+        <apex:outputField value="{! BioBriefing__c.Other_Address__c	 }"/>
+        <apex:outputField value="{! BioBriefing__c.Mailing_Address__c }"/>
+        <apex:outputField value="{! BioBriefing__c.Other_Address__c	 }"/>
+        <apex:outputField value="{! BioBriefing__c.Languages__c }"/>
+        <apex:outputField value="{! BioBriefing__c.Level__c }"/>
+        <apex:outputField value="{! BioBriefing__c.CreatedByID }"/>
+        <apex:outputField value="{! BioBriefing__c.Description__c }"/>
+        <apex:outputField value="{! BioBriefing__c.Biographic_Photo1__c}"/>
+        <!--<apex:outputLink value="/{!BioBriefing__c.imageUrl__c}" target="_blank">View File</apex:outputLink>-->
+        <apex:inputFile value="{!picture}" accept="image/*" />
+        <!--<apex:image url="/servlet/servlet.FileDownload?file={!FileId}"/>-->
+        </apex:pageBlockSection>
+     </apex:pageBlock>
+        </apex:form>
+</apex:page>

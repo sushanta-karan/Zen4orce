@@ -1,0 +1,73 @@
+<apex:page standardController="Campaign" title="Campaign Details" sidebar="false" extensions="CampaignDetailExtension" standardStylesheets="false">
+    <head>
+  <style>
+.dropdown {
+    position: relative;
+      left:1200px;
+    display: inline-block;
+}
+.custom1 {
+    background-color: f10f9f10 !important;
+}
+.custom3 {
+    background-color: green !important;
+}
+      
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f10f9f10;
+    min-width: 160px;
+    box-shadow: 10px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 20px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+          </head>
+   <apex:form >
+    <apex:pageBlock title="Campaign Details" >
+        <div class="dropdown">
+            
+  <button class="dropbtn">Action</button>
+  <div class="dropdown-content">
+      <a href="https://ap1.salesforce.com/home/home.jsp">Manage Members</a><br/>
+    <a href="https://ap1.salesforce.com/home/home.jsp">Add Members from Mailing List</a><br/>
+    
+  </div>
+</div>
+        <apex:outputPanel layout="block" styleClass="custom1">
+    <apex:pageBlockSection columns="2" title="Campaign Details" collapsible="false" id="pbs" showHeader="true" >
+            <apex:facet name="header">
+                       <apex:outputpanel >
+                       <apex:commandLink style="left;" value="Edit" action="{!edit}" />
+                            &nbsp;&nbsp;
+                        <apex:commandLink value="Delete" action="{!softdelete}" />
+                            &nbsp;&nbsp;
+                        <apex:commandLink value="Clone" action="{!copy}" />
+                            &nbsp;&nbsp;
+                        </apex:outputpanel>
+                </apex:facet>
+            
+         	<apex:outputField value="{! Campaign.OwnerID }"/>
+            <apex:outputField value="{! Campaign.Status }"/>
+            <apex:outputField value="{! Campaign.Name }"/>
+            <apex:outputField value="{! Campaign.StartDate }"/>
+            <apex:outputField value="{! Campaign.EndDate }"/>
+            <apex:outputField value="{! Campaign.NumberSent }"/>
+            <apex:outputField value="{! Campaign.IsActive }"/>
+            <apex:outputField value="{! Campaign.Type }"/>
+            <apex:outputField value="{! Campaign.CreatedByID }"/>
+            <apex:outputField value="{! Campaign.LastModifiedByID }"/>
+            <apex:outputField value="{! Campaign.Description }"/>
+            <apex:outputField value="{! Campaign.Soft_Deleted__c }"/>
+        	<apex:outputField value="{! Campaign.Campaign_Soft_Delete_Pending__c }"/>
+        </apex:pageBlockSection>
+            </apex:outputPanel>
+        </apex:pageBlock>
+   </apex:form>
+</apex:page>
