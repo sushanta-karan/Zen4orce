@@ -1,0 +1,120 @@
+<apex:page controller="FetchObjects" sidebar="false"  showHeader="false"> 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+    j$ = jQuery.noConflict();
+	j$(document).ready(function(){
+        j$(document).delegate(".sampleClass", "click", function(event) {
+       debugger;
+            if(event.target.tagName == 'SPAN'){
+                var a = event.target.closest("td");
+                window.location.href = "/"+a.title;
+                }
+   });
+    });    
+    
+   
+    </script>
+<style type="text/css">
+       .yourStyleClass{
+       width: 200px;}
+h1
+{
+text-align:center;
+color:black;
+font-style: italic;
+font-size: 12px;}
+
+h2
+{
+text-align:center;
+color:black;
+font-style: italic;
+    clear: left;
+font-size: 50px;}
+
+.goright {text-align: right;
+       }
+
+    </style>
+   
+    <apex:form >
+        
+            <body>
+                <img id="myImage" src="http://www.w3schools.com/html/programming.gif" width="100" height="100"></img>
+</body>
+                
+<h2>Q U E R Y      B U I L D E R </h2>
+
+<br/><br/>
+		<apex:pageBlock > 
+            <h1>
+                <apex:pageMessages id="ShowMessages" /> 
+            </h1>
+              
+        <h1>
+            <apex:outputLabel styleClass="goright" value="Choose the object, fields, and critera to build a SOQL query below:"></apex:outputLabel><br/><br/><br/><br/>
+    </h1>        
+   
+    <h1>
+        <apex:outputLabel styleClass="goright" value="Select Object"></apex:outputLabel>
+    </h1>
+                <apex:selectList value="{!selectedObject}" size="1" label="Select Object" styleClass="yourStyleClass" >
+                    <apex:actionSupport event="onchange" action="{!getFields}" /> 
+                    <apex:selectOptions value="{!lstOptions}" /> </apex:selectList> <br/>
+            
+            
+            
+            <p>
+            <h1>
+        <apex:outputLabel styleClass="goright" value="Select Fields"></apex:outputLabel>
+            </h1>
+        </p>
+            
+                  <apex:selectList multiselect="true" size="7" value="{!lstSelectedFields}" onclick="myfunc();" styleClass="yourStyleClass" > 
+                     <apex:actionFunction action="{!getquery}" name="myfunc"/>
+                    <apex:selectOptions value="{!lstfieldname}"/> </apex:selectList><br/><br/><br/>
+                
+               <h1>
+        <apex:outputLabel styleClass="goright" value="Sort By	"></apex:outputLabel>
+    </h1> 
+                <apex:selectRadio label="Sort By" value="{!value1}" onclick="myfunc();"   style="width:350px;"  id="theRadio">
+            <apex:selectOption itemValue="ASC" itemlabel="Ascending" />
+            <apex:selectOption itemValue="DESC" itemlabel="Descending"/>
+            <apex:actionFunction action="{!getquery}" name="myfunc"/>
+            </apex:selectRadio><p/>
+                
+                <h1><apex:outputLabel > Maximum # of records to display : </apex:outputLabel></h1> 
+         <apex:selectList size="1" value="{!selectedstage}"  styleClass="yourStyleClass" onclick="myfunc();">
+             <apex:actionFunction action="{!getquery}" name="myfunc"/>
+             <apex:selectOptions value="{!stagelist }" /><br/>
+             </apex:selectList><br/><br/><br/>
+            <h1>
+                <apex:outputLabel > SOQL Query : </apex:outputLabel>
+                </h1> 
+                <apex:inputTextarea label="SOQL Query" value="{!strQuery}"  id="getRecords" rendered="true" cols="90" /><br/><br/><br/>
+            
+            <apex:commandButton value="QUERY" action="{!getRecords}" rerender="ShowRecords,ShowMessages"  /><br/><br/><br/>
+           
+            
+            
+            <apex:outputPanel id="ShowRecords" > 
+              <apex:pageBlockTable value="{!lstObject}" var="obj" >
+                  <apex:repeat value="{!lstSelectedFields}" var="FieldName" > 
+                      
+                          <apex:column >
+                              <apex:facet name="header">{!FieldName}</apex:facet>
+                          <apex:outputLink value="/{!obj.Id}">{!obj[FieldName]} </apex:outputLink>
+                           </apex:column>
+                      
+                <!--<apex:column value="{!obj[FieldName]}" />-->
+                      </apex:repeat> 
+                </apex:pageBlockTable>
+                    <!--<apex:pageBlockTable value="{!lstObject}" var="obj">  
+                       <apex:repeat value="{!lstSelectedFields}" var="FieldName"> 
+                           <apex:column value="{!obj[FieldName]}" styleClass="sampleClass" title="{!obj.Id}"/>
+                        </apex:repeat>  
+                    </apex:pageBlockTable>--> 
+            </apex:outputPanel> 
+        </apex:pageBlock> 
+    </apex:form> 
+</apex:page>
